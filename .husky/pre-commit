@@ -1,0 +1,4 @@
+pnpm check:lockfiles &&
+pnpm format &&
+pnpm lint &&
+pnpm test
