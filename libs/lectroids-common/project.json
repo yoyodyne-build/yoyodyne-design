@@ -1,0 +1,19 @@
+{
+  "name": "lectroids-common",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/lectroids-common/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/lectroids-common",
+        "main": "libs/lectroids-common/src/index.ts",
+        "tsConfig": "libs/lectroids-common/tsconfig.lib.json",
+        "assets": ["libs/lectroids-common/*.md"]
+      }
+    }
+  }
+}

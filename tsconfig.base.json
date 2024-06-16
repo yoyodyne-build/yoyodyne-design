@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@yoyodyne/lectroids-common": ["libs/lectroids-common/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
