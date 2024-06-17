@@ -7,7 +7,7 @@
 
 <table style="border:none">
   <tr>
-    <td style="border:none">
+    <td style="border:none;min-width:205px;text-align:center">
       <img src="https://raw.githubusercontent.com/yoyodyne-build/yoyodyne-design/main/images/hk_cavalier.png" alt="Hong Kong Cavalier" width="200" height="200">
     </td>
     <td style="border:none">
