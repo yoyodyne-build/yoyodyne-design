@@ -1,0 +1,111 @@
+{
+  "name": "lectroids-angular",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/lectroids-angular/src",
+  "prefix": "lib",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:package",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "packages/lectroids-angular/ng-package.json",
+        "tailwindConfig": "packages/lectroids-angular/tailwind.config.js"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/lectroids-angular/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/lectroids-angular/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-lib": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/packages/lectroids-angular"],
+      "configurations": {
+        "production": {
+          "commands": [
+            "nx run lectroids-angular:build:production",
+            "tailwindcss -c packages/lectroids-angular/tailwind.config.js -i ./packages/lectroids-angular/src/styles.css -o ./dist/packages/lectroids-angular/lectroids.css -m"
+          ]
+        },
+        "development": {
+          "commands": [
+            "nx run lectroids-angular:build:development",
+            "tailwindcss -c packages/lectroids-angular/tailwind.config.js -i ./packages/lectroids-angular/src/styles.css -o ./dist/packages/lectroids-angular/lectroids.css"
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/lectroids-angular/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "storybook": {
+      "executor": "@storybook/angular:start-storybook",
+      "options": {
+        "port": 4400,
+        "configDir": "packages/lectroids-angular/.storybook",
+        "browserTarget": "lectroids-angular:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "build-storybook": {
+      "executor": "@storybook/angular:build-storybook",
+      "outputs": ["{options.outputDir}"],
+      "options": {
+        "outputDir": "dist/storybook/lectroids-angular",
+        "configDir": "packages/lectroids-angular/.storybook",
+        "browserTarget": "lectroids-angular:build-storybook",
+        "compodoc": false
+      },
+      "configurations": {
+        "ci": {
+          "quiet": true
+        }
+      }
+    },
+    "test-storybook": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "test-storybook -c packages/lectroids-angular/.storybook --url=http://localhost:4400"
+      }
+    },
+    "static-storybook": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "lectroids-angular:build-storybook",
+        "staticFilePath": "dist/storybook/lectroids-angular",
+        "spa": true
+      },
+      "configurations": {
+        "ci": {
+          "buildTarget": "lectroids-angular:build-storybook:ci"
+        }
+      }
+    },
+    "stylelint": {
+      "executor": "nx-stylelint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/lectroids-angular/**/*.css"]
+      }
+    }
+  }
+}

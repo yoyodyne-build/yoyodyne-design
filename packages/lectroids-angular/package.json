@@ -1,0 +1,35 @@
+{
+  "name": "@yoyodyne/lectroids-angular",
+  "version": "0.0.1",
+  "private": false,
+  "description": "React components for Lectroids",
+  "keywords": [
+    "Design",
+    "Design-system",
+    "Angular",
+    "Standalone",
+    "Components",
+    "Demo"
+  ],
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Tim Goshinski",
+    "email": "tim@code-chimp.com",
+    "url": "https://code-chimp.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoyodyne-build/yoyodyne-design.git",
+    "directory": "packages/lectroids-angular"
+  },
+  "bugs": {
+    "url": "https://github.com/yoyodyne-build/yoyodyne-design/issues"
+  },
+  "peerDependencies": {
+    "@angular/core": "^18.0.0",
+    "@nx/angular": "19.3.0",
+    "tailwind-merge": "^2.3.0",
+    "@yoyodyne/lectroids-common": "0.0.1"
+  },
+  "sideEffects": false
+}

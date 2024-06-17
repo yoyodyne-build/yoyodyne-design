@@ -1,0 +1,7 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/packages/lectroids-angular",
+  "lib": {
+    "entryFile": "src/index.ts"
+  }
+}
