@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@yoyodyne/lectroids-common": ["libs/lectroids-common/src/index.ts"]
+      "@yoyodyne/lectroids-common": ["libs/lectroids-common/src/index.ts"],
+      "@yoyodyne/lectroids-react": ["packages/lectroids-react/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
