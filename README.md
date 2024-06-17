@@ -5,9 +5,20 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 
-<p style="text-align:center;">
-  <img src="https://raw.githubusercontent.com/yoyodyne-build/yoyodyne-design/main/images/hk_cavalier.png" alt="Hong Kong Cavalier" width="200" height="200">
-</p>
+<table style="border:none">
+  <tr>
+    <td style="border:none">
+      <img src="https://raw.githubusercontent.com/yoyodyne-build/yoyodyne-design/main/images/hk_cavalier.png" alt="Hong Kong Cavalier" width="200" height="200">
+    </td>
+    <td style="border:none">
+      <h3>Home Base for the Lectroids design system</h3>
+      <p>
+        A sample design system created to explore architectural patterns and best practices for
+        building a shared Angular and React component library.
+      </p>
+    </td>
+  </tr>
+</table>
 
 
 The Nx monorepo infrastructure to manage my demo **Lectroids** design system.
