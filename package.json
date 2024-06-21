@@ -24,7 +24,7 @@
     "url": "https://github.com/yoyodynt-build/yoyodyne-design/issues"
   },
   "volta": {
-    "node": "20.14.0"
+    "node": "20.15.0"
   },
   "scripts": {
     "check:lockfiles": "node ./scripts/check-lock-files.js",
